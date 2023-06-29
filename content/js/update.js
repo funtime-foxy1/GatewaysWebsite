@@ -1,25 +1,20 @@
-function getJSONP(url, success) {
-
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0] 
-               || document.documentElement;
-
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
-    };
-
-    script.src = url.replace('callback=?', 'callback=' + ud);
-    head.appendChild(script);
-
-}
-
 function refreshProgressBars() {
-    let url = "";
-    getJSONP(url, (data) => {
-        console.log(data);
-    });
+    fetch('https://raw.githubusercontent.com/funtime-foxy1/GatewaysWebsite/main/ignore/progress.json')
+        .then(res => res.json())
+        .then(json => {
+            //json vaiable contains object with data
+            let results = json.result;
+            document.getElementsByClassName("progress__fill")[0].style.width = results.development + "%";
+            document.getElementsByClassName("progress__text")[0].innerHTML = results.development + "%";
+
+            document.getElementsByClassName("progress__fill")[1].style.width = results.playtest + "%";
+            document.getElementsByClassName("progress__text")[1].innerHTML = results.playtest + "%";
+
+            document.getElementsByClassName("progress__fill")[2].style.width = results.polish + "%";
+            document.getElementsByClassName("progress__text")[2].innerHTML = results.polish + "%";
+        });
 }
 
-refreshProgressBars();
+function onpageloadaaa() {
+    refreshProgressBars();
+}

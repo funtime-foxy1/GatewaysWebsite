@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="content/css/update.css">
 </head>
-<body>
+<body onload="onpageloadaaa()">
     <div id="pleaseturn">
         <p>Turn to landscape please!</p>
     </div>
@@ -18,27 +18,29 @@
         <h2>Development:</h2>
         <div class="progress">
             <div class="progress__fill"></div>
-            <span class="progress__text">0/1,000</span>
+            <span class="progress__text">0%</span>
         </div>
 
         <h2>Play testing:</h2>
         <div class="progress">
             <div class="progress__fill"></div>
-            <span class="progress__text">0/1,000</span>
+            <span class="progress__text">0%</span>
         </div>
 
         <h2>Polishing:</h2>
         <div class="progress">
             <div class="progress__fill"></div>
-            <span class="progress__text">0/1,000</span>
+            <span class="progress__text">0%</span>
         </div>
+        <br>
+        <button class="styledButton" onclick="refreshProgressBars()" style="font-size: 26px;">Refresh</button>
     </div>
 
     <div id="topnav">
         <img src="content/img/title.png" width="256" alt="Gateways logo">
         <div id="topnavlinks">
             <a href="index.html">Home</a>
-            <a href="#nextupdate">Next update progress</a>
+            <a href="update.html">Next update progress</a>
             <a data-yes href="about.html">About Me</a>
         </div>
     </div>
