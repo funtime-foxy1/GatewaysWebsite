@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+    background-image: url("../img/thumbnail.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    overflow-y: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    color: white;
+    margin: 0;
+}
+
+#pleaseturn {
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0.5);
+
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+
+    z-index: 9;
+}
+
+@media screen and (orientation: landscape) {
+    #pleaseturn {
+        display: none;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+}
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+#topnav {
+    padding: 5px;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-image: linear-gradient(#000000a1, #ff000000);
+    height: 75px;
+}
+
+#topnavlinks {
+    justify-self: center;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#topnavlinks a {
+    float: left;
+    color: #e2e2e2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#topnavlinks a[data-yes] {
+    text-decoration: underline;
+}
+
+.styledButton {
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+
+    transition-duration: 200ms;
+}
+
+.styledButton.rbx {
+    background-image: linear-gradient(#6d6d6d, #3d3d3d);
+    color: white;
+}
+
+.styledButton.gj {
+    background-image: linear-gradient(#309179, #00ffc0);
+}
+
+.styledButton.yt {
+    background-image: linear-gradient(#ff0000, #ff5050);
+}
+
+.styledButton.discord {
+    background-image: linear-gradient(#6200ff, #8e48ff);
+    color: white;
+}
+
+.styledButton.itch {
+    background-image: linear-gradient(#b80000, #680000);
+    color: white;
+}
+
+.styledButton:hover {
+    scale: 1.05;
+}
+
+#footer {
+    margin-top: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+
+
+
+.progress {
+    position: relative;
+    width: 50%;
+    height: 30px;
+    background-color: #111111;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress__fill {
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    transition-duration: 2s;
+}
+
+.progress__text {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-style: italic;
+}
