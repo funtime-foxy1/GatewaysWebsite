@@ -1,5 +1,8 @@
 {
-  "development": 0,
-  "playtest": 0,
-  "polish": 0
+  "result": {
+    "development": 0,
+    "playtest": 0,
+    "polish": 0
+  },
+  "replyer": "github"
 }
