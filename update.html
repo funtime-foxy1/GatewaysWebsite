@@ -12,7 +12,16 @@
     <div id="pleaseturn">
         <p>Turn to landscape please!</p>
     </div>
-    
+        
+    <div id="topnav">
+        <img src="content/img/title.png" width="256" alt="Gateways logo">
+        <div id="topnavlinks">
+            <a href="index.html">Home</a>
+            <a data-yes href="update.html">Next update progress</a>
+            <a href="about.html">About Me</a>
+        </div>
+    </div>
+
     <div style="margin-top:70px;text-align:center;background-color:rgba(0,0,0,.3)">
         <h1>Next gateways update?</h1>
         <hr>
@@ -34,16 +43,12 @@
             <span class="progress__text">0%</span>
         </div>
         <br>
-        <button class="styledButton" onclick="refreshProgressBars()" style="font-size: 26px;">Refresh</button>
-    </div>
-
-    <div id="topnav">
-        <img src="content/img/title.png" width="256" alt="Gateways logo">
-        <div id="topnavlinks">
-            <a href="index.html">Home</a>
-            <a data-yes href="update.html">Next update progress</a>
-            <a href="about.html">About Me</a>
+        <div id="addionalnotes" style="background-color:rgba(129, 129, 129, 0.466);">
+            <h2><i>Additonal note</i></h2>
+            <i style="color:white;" id="note">nothing here...</i>
+            <br>
         </div>
+        <button class="styledButton" onclick="refreshallthings()" style="font-size: 26px;">Refresh</button>
     </div>
 
     <!-- stuff -->
